@@ -11,7 +11,7 @@ const ProductGrid = styled.div`
 `;
 
 const ProductCard = styled.div`
-  background: white;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -37,7 +37,7 @@ const ProductPrice = styled.p`
 
 const AddButton = styled.button`
   background-color: black;
-  color: white;
+  color: #fff;
   border: none;
   padding: 0.8rem 1.2rem;
   font-size: 1rem;

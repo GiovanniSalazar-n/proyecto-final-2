@@ -1,26 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { 
-  registerStart,
-  registerSuccess,
-  registerFailure ,
-  selectAuth
-} from '../../redux/authSlice';
-import { 
-  RegisterContainer,
-  RegisterCard,
-  RegisterTitle,
-  RegisterFormStyled,
-  FormGroup,
-  Label,
-  Input,
-  RegisterButton,
-  RegisterFooter,
-  FooterText,
-  FooterLink,
-  ErrorMessage
-} from './style';
+import { registerStart,registerSuccess,registerFailure ,selectAuth} from '../../redux/authSlice';
+import { RegisterContainer,RegisterCard,RegisterTitle,RegisterFormStyled,
+  FormGroup,Label,Input,RegisterButton,RegisterFooter,
+  FooterText,FooterLink,ErrorMessage} from './style';
 
 const Register = () => {
   const [formData, setFormData] = useState({

@@ -57,7 +57,7 @@ const Checkout = () => {
   };
 
   return (
-    <CheckoutContainer>
+    <CheckoutContainer role="main" aria-label="Página de checkout">
       <h2>Confirmar Compra</h2>
 
       <Section>
@@ -68,32 +68,36 @@ const Checkout = () => {
           </div>
         ))}
       </Section>
-
+      <form onSubmit={(e) => { e.preventDefault(); handleConfirm(); }}>
       <Section>
         <h3>Dirección de envío</h3>
         <Label htmlFor="name">Nombre</Label>
-        <StyledInput  name="name" value={address.name} onChange={handleAddressChange} />
+        <StyledInput id='name' name="name" value={address.name} onChange={handleAddressChange} />
 
-        <Label htmlFor="city">Ciudad</Label>
-        <StyledInput  name="city" value={address.city} onChange={handleAddressChange} />
+        <Label htmlFor="city" >Ciudad</Label>
+        <StyledInput id='city' name="city" value={address.city} onChange={handleAddressChange} />
 
         <Label htmlFor="country">País</Label>
-        <StyledInput  name="country" value={address.country} onChange={handleAddressChange} />
+        <StyledInput  id='country' name="country" value={address.country} onChange={handleAddressChange} />
 
         <Label htmlFor="address">Dirección</Label>
-        <StyledInput  name="address" value={address.address} onChange={handleAddressChange} />
+        <StyledInput  id='address'name="address" value={address.address} onChange={handleAddressChange} />
       </Section>
 
-      <Section>
+      <Section as="section" role="region" aria-label="Información de pago">
         <h3>Método de pago</h3>
         <Label htmlFor="cardNum">Número de tarjeta</Label>
-        <StyledInput  name="cardNum" value={paymentMethod.cardNum} onChange={handlePaymentChange} />
+        <StyledInput id='cardNum' name="cardNum" value={paymentMethod.cardNum} onChange={handlePaymentChange} />
 
         <Label htmlFor="cardCode">Código de seguridad</Label>
-        <StyledInput  name="cardCode" value={paymentMethod.cardCode} onChange={handlePaymentChange} />
+        <StyledInput id='cardCode' name="cardCode" value={paymentMethod.cardCode} onChange={handlePaymentChange} />
       </Section>
 
-      <Button onClick={handleConfirm}>Confirmar Compra</Button>
+      <Button 
+      type='submit'
+      onClick={handleConfirm}
+      aria-label='Confirma la compra de datos ingresados'>Confirmar Compra</Button>
+      </form>
     </CheckoutContainer>
   );
 };

@@ -13,11 +13,11 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <h1>Tienda Adidas</h1>
+      <h1 lang='en'> Adidas store</h1>
       <ProductGrid>
         {products.map((product) => (
           <ProductCard key={product.id}>
-            <ProductImage src={product.image} alt={product.name} />
+            <ProductImage src={product.image} alt={product.alt} />
             <ProductName>{product.name}</ProductName>
             <ProductPrice>${product.price}</ProductPrice>
             <AddButton onClick={() => handleAddToCart(product)}>Agregar al carrito</AddButton>

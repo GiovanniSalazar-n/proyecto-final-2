@@ -48,7 +48,7 @@ import styled from 'styled-components';
 `;
 const Banner = styled.img`
   width: 100%;
-  height: 8.8rem;
+  height: 11.8rem;
   display: block;
 `;
 export{
